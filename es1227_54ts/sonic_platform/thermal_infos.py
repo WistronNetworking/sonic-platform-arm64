@@ -103,7 +103,7 @@ class ThermalInfo(ThermalPolicyInfoBase):
         # Calculate average temp within the device
         num_of_thermals = chassis.get_num_thermals()
 
-        # Initial the to default
+        # Initialize to defaults
         self.normal_thres = False
         self.high_thres = False
         self.critical_high_thres = False
@@ -176,8 +176,8 @@ class ThermalInfo(ThermalPolicyInfoBase):
 
     def is_over_normal_threshold(self):
         """
-        Retrieves if the temperature is over high critical threshold
-        :return: True if the temperature is over high critical threshold else False
+        Retrieves if the temperature is over normal threshold
+        :return: True if the temperature is over normal threshold else False
         """
         if self.normal_thres and not self.critical_high_thres and not self.high_thres:
             return True
